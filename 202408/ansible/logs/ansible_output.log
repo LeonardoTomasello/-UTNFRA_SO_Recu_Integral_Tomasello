@@ -1,0 +1,95 @@
+2025-07-08 03:25:23,929 p=24338 u=LTomasello n=ansible | - Role roles/Alta_Usuarios_Tomasello was created successfully
+2025-07-08 03:25:33,320 p=24339 u=LTomasello n=ansible | - Role roles/Sudoers_Tomasello was created successfully
+2025-07-08 03:25:38,022 p=24340 u=LTomasello n=ansible | - Role roles/Instala-tools_Tomasello was created successfully
+2025-07-08 03:26:43,979 p=24342 u=LTomasello n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2025-07-08 03:26:44,336 p=24342 u=LTomasello n=ansible | PLAY [all] ********************************************************************************************************************************
+2025-07-08 03:26:44,367 p=24342 u=LTomasello n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2025-07-08 03:26:44,514 p=24342 u=LTomasello n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nLTomasello@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2025-07-08 03:26:46,155 p=24342 u=LTomasello n=ansible | ok: [localhost]
+2025-07-08 03:26:46,180 p=24342 u=LTomasello n=ansible | TASK [include_role : 2PRecuperatorio] *****************************************************************************************************
+2025-07-08 03:26:46,236 p=24342 u=LTomasello n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] *********************************************************************************************
+2025-07-08 03:26:46,256 p=24342 u=LTomasello n=ansible | ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2025-07-08 03:26:46,268 p=24342 u=LTomasello n=ansible | TASK [Otra tarea] *************************************************************************************************************************
+2025-07-08 03:26:46,288 p=24342 u=LTomasello n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-07-08 03:26:46,345 p=24342 u=LTomasello n=ansible | PLAY RECAP ********************************************************************************************************************************
+2025-07-08 03:26:46,346 p=24342 u=LTomasello n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-08 03:26:46,346 p=24342 u=LTomasello n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-08 04:17:03,711 p=24483 u=LTomasello n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2025-07-08 04:17:03,934 p=24483 u=LTomasello n=ansible | PLAY [testing] ****************************************************************************************************************************
+2025-07-08 04:17:03,949 p=24483 u=LTomasello n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2025-07-08 04:17:04,077 p=24483 u=LTomasello n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nLTomasello@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2025-07-08 04:17:04,079 p=24483 u=LTomasello n=ansible | PLAY RECAP ********************************************************************************************************************************
+2025-07-08 04:17:04,080 p=24483 u=LTomasello n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-08 04:45:34,848 p=24504 u=LTomasello n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2025-07-08 04:45:35,086 p=24504 u=LTomasello n=ansible | PLAY [testing] ****************************************************************************************************************************
+2025-07-08 04:45:35,101 p=24504 u=LTomasello n=ansible | TASK [Gathering Facts] ********************************************************************************************************************
+2025-07-08 04:45:38,379 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1]
+2025-07-08 04:45:38,411 p=24504 u=LTomasello n=ansible | TASK [include_role : 2PRecuperatorio] *****************************************************************************************************
+2025-07-08 04:45:38,462 p=24504 u=LTomasello n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] *********************************************************************************************
+2025-07-08 04:45:38,482 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2025-07-08 04:45:38,498 p=24504 u=LTomasello n=ansible | TASK [2PRecuperatorio : Crear directorio tmp/alumno] **************************************************************************************
+2025-07-08 04:45:39,037 p=24504 u=LTomasello n=ansible | changed: [127.0.0.1]
+2025-07-08 04:45:39,053 p=24504 u=LTomasello n=ansible | TASK [2PRecuperatorio : Crear archivo datos.txt con datos] ********************************************************************************
+2025-07-08 04:45:40,136 p=24504 u=LTomasello n=ansible | changed: [127.0.0.1]
+2025-07-08 04:45:40,150 p=24504 u=LTomasello n=ansible | TASK [2PRecuperatorio : Aviso de exito] ***************************************************************************************************
+2025-07-08 04:45:40,174 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => {
+    "msg": "Archivo creado"
+}
+2025-07-08 04:45:40,187 p=24504 u=LTomasello n=ansible | TASK [include_role : Alta_Usuarios_Tomasello] *********************************************************************************************
+2025-07-08 04:45:40,245 p=24504 u=LTomasello n=ansible | TASK [Alta_Usuarios_Tomasello : Rol: Alta_Usuarios_Tomasello] *****************************************************************************
+2025-07-08 04:45:40,266 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: Alta_Usuarios_Tomasello"
+}
+2025-07-08 04:45:40,281 p=24504 u=LTomasello n=ansible | TASK [Alta_Usuarios_Tomasello : Creo grupos GProfesores y GAlumnos] ***********************************************************************
+2025-07-08 04:45:40,950 p=24504 u=LTomasello n=ansible | changed: [127.0.0.1] => (item=GProfesores)
+2025-07-08 04:45:41,377 p=24504 u=LTomasello n=ansible | changed: [127.0.0.1] => (item=GAlumnos)
+2025-07-08 04:45:41,395 p=24504 u=LTomasello n=ansible | TASK [Alta_Usuarios_Tomasello : Create a user 'Profesor' with a home directory] ***********************************************************
+2025-07-08 04:45:42,132 p=24504 u=LTomasello n=ansible | changed: [127.0.0.1]
+2025-07-08 04:45:42,147 p=24504 u=LTomasello n=ansible | TASK [Alta_Usuarios_Tomasello : Create a user 'Alumno' with a home directory] *************************************************************
+2025-07-08 04:45:42,665 p=24504 u=LTomasello n=ansible | changed: [127.0.0.1]
+2025-07-08 04:45:42,682 p=24504 u=LTomasello n=ansible | TASK [Alta_Usuarios_Tomasello : Aviso de exito] *******************************************************************************************
+2025-07-08 04:45:42,706 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => {
+    "msg": "Archivo Usuarios y Grupos creados"
+}
+2025-07-08 04:45:42,725 p=24504 u=LTomasello n=ansible | TASK [include_role : Sudoers_Tomasello] ***************************************************************************************************
+2025-07-08 04:45:42,798 p=24504 u=LTomasello n=ansible | TASK [Sudoers_Tomasello : Rol: Sudoers_Tomasello] *****************************************************************************************
+2025-07-08 04:45:42,825 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: Sudoers_Tomasello"
+}
+2025-07-08 04:45:42,844 p=24504 u=LTomasello n=ansible | TASK [Sudoers_Tomasello : Crear archivo /etc/sudoers.d/gprofesores si no existe] **********************************************************
+2025-07-08 04:45:43,402 p=24504 u=LTomasello n=ansible | changed: [127.0.0.1]
+2025-07-08 04:45:43,418 p=24504 u=LTomasello n=ansible | TASK [Sudoers_Tomasello : Permitir sudo sin contraseña a grupo GProfesores] ***************************************************************
+2025-07-08 04:45:44,050 p=24504 u=LTomasello n=ansible | changed: [127.0.0.1]
+2025-07-08 04:45:44,062 p=24504 u=LTomasello n=ansible | TASK [Sudoers_Tomasello : Aviso de exito] *************************************************************************************************
+2025-07-08 04:45:44,084 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => {
+    "msg": "Sudoers modificado"
+}
+2025-07-08 04:45:44,097 p=24504 u=LTomasello n=ansible | TASK [include_role : Instala-tools_Tomasello] *********************************************************************************************
+2025-07-08 04:45:44,152 p=24504 u=LTomasello n=ansible | TASK [Instala-tools_Tomasello : Rol: Instala-tools_Tomasello] *****************************************************************************
+2025-07-08 04:45:44,172 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => {
+    "msg": "Inicio de tareas dentro del Rol: Instala-tools_Tomasello"
+}
+2025-07-08 04:45:44,186 p=24504 u=LTomasello n=ansible | TASK [Instala-tools_Tomasello : Agrego programas solicitados] *****************************************************************************
+2025-07-08 04:45:46,385 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => (item=htop)
+2025-07-08 04:45:48,333 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => (item=tmux)
+2025-07-08 04:45:50,442 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => (item=tree)
+2025-07-08 04:46:00,788 p=24504 u=LTomasello n=ansible | changed: [127.0.0.1] => (item=speedtest-cli)
+2025-07-08 04:46:00,805 p=24504 u=LTomasello n=ansible | TASK [Instala-tools_Tomasello : Aviso de exito] *******************************************************************************************
+2025-07-08 04:46:00,825 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => {
+    "msg": "Programas instalados"
+}
+2025-07-08 04:46:00,840 p=24504 u=LTomasello n=ansible | TASK [Otra tarea] *************************************************************************************************************************
+2025-07-08 04:46:00,861 p=24504 u=LTomasello n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-07-08 04:46:00,888 p=24504 u=LTomasello n=ansible | PLAY RECAP ********************************************************************************************************************************
+2025-07-08 04:46:00,889 p=24504 u=LTomasello n=ansible | 127.0.0.1                  : ok=18   changed=8    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

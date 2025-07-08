@@ -2,8 +2,8 @@ version: '3'
 
 services:
     web:
-        image: 
+        image:   "leotomasello96/web3_sp2025_tomasello:latest"
         ports:
-            - 
+          -   "8081:80"
         volumes:
-            - 
+          -   "./web/file:/usr/share/nginx/html/file"

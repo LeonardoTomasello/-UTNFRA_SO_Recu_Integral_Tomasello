@@ -1,0 +1,24 @@
+---
+# tasks file for roles/Sudoers_Tomasello
+- name: "Rol: Sudoers_Tomasello"
+  debug:
+    msg: "Inicio de tareas dentro del Rol: Sudoers_Tomasello"
+
+- name: "Crear archivo /etc/sudoers.d/gprofesores si no existe"
+  become: yes
+  file:
+    path: /etc/sudoers.d/gprofesores
+    state: touch
+    mode: '0440'
+
+- name: "Permitir sudo sin contraseña a grupo GProfesores"
+  become: yes
+  lineinfile:
+    path: /etc/sudoers.d/gprofesores
+    state: present
+    line: "%GProfesores ALL=(ALL) NOPASSWD: ALL"
+    validate: 'visudo -cf %s'
+
+- name: "Aviso de exito"
+  debug:
+    msg: "Sudoers modificado"
